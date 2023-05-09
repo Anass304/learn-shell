@@ -30,6 +30,8 @@ echo -e "\e[35mMagenta color\e[0m"
 echo -e "\e[36mCyan color\e[0m"
 echo -e Normal Text
 
+# https://misc.flogisoft.com/bash/tip_colors_and_formatting
+
 # Some times we need to print multiple lines
 echo -e "line1\nline2\nline3"
 ## \e for color, same \n for new line
