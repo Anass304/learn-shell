@@ -1,28 +1,25 @@
-## Declare a function
+# Functions are like variables
+# Variable - When we assign a name to a set of data then it is a variable.
+# Function - When we assign a name to a set of commands then it is function.
 
-xyz() {
-  echo Hello from Function
-  echo First Argument - $1
-  echo Second Argument -- $2
-  echo All Arguments - $*
-  echo No of Arguments - $#
-  a=300
-  echo Value of a = $a
-  b=200
+
+# Function Declare
+example() {
+  echo I am a example function
+  echo a - $a
+  b=20
 }
 
-## Main Program
 ## Call a function
-a=120
-xyz 123 456
-echo Value of b - $b
+a=10
+example
+echo b - $b
 
-
-abc() {
-  echo Hello
-  return 109
-  echo Bye
+example1() {
+  echo example1 - abc
+  return 2
+  echo example1 - xyz
 }
 
-abc
-echo Exit Status of abc function = $?
+example1
+echo example1 return status - $?
