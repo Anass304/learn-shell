@@ -1,25 +1,33 @@
-# Functions are like variables
-# Variable - When we assign a name to a set of data then it is a variable.
-# Function - When we assign a name to a set of commands then it is function.
+# A name given to set of commands is called as function
 
+# Declare a function
 
-# Function Declare
-example() {
-  echo I am a example function
-  echo a - $a
-  b=20
+function_name() {
+  echo Hello World
 }
 
-## Call a function
-a=10
-example
-echo b - $b
+# Call function
+function_name
 
-example1() {
-  echo example1 - abc
-  return 2
-  echo example1 - xyz
+## We can send inputs to the function and we can access them with special variables $1-$n, $*, $#
+
+function_name1() {
+  a=234
+  echo First Argument = $1
+  echo Second Argument = $2
+  echo All Arguments = $*
+  echo No Of Arguments = $#
 }
 
-example1
-echo example1 return status - $?
+a=123
+function_name1 123 xyz
+
+# Functions will have its own exit status , but not with exit command, we have to use return command with exit states.
+function_name2() {
+  echo Hello
+  return 1
+  # 1 is a exit status and it ranges from 0-255
+}
+
+function_name2
+echo Exit status of function - $?
